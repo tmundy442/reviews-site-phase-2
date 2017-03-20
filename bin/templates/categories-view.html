@@ -1,0 +1,30 @@
+<!DOCTYPE HTML>
+<html xmlns:th="http://www.thymeleaf.org">
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <link th:href="@{/css/categories-view.css}" href="/css/categories-view.css"  rel="stylesheet" type="text/css"/>
+    
+</head>
+
+<body>
+
+<div class="col-md-8 col-md-offset-2">
+	<h1>Movie Categories</h1>
+  </div>
+
+<ul>
+  <div  id="content">
+	<div th:each="Categories : ${categories}">
+		<li>
+			<a th:href="@{'Category?id=' + ${Categories.id}}">
+			<p th:text=" 'See All ' + ${Categories.categoryName} + ' Reviews.'"></p>
+			</a>	
+		</li>
+		
+	</div>
+  </div>
+  </ul>
+    
+</body>
+</html>

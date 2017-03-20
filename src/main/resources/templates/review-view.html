@@ -1,0 +1,27 @@
+<!DOCTYPE HTML>
+<html xmlns:th="http://www.thymeleaf.org">
+
+<head>
+    <div id="titletext">
+    <title th:text="${selectedReview.title}"></title>
+  </div>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <link th:href="@{/css/review-view.css}" href="/css/review-view.css"  rel="stylesheet" type="text/css"/>
+    
+</head>
+
+<body>
+  <div class="col-md-8 col-md-offset-2">
+	<h1 th:text="${selectedReview.title}" ></h1>
+  </div>
+
+<div class="col-md-8 col-md-offset-2" id="content">
+  <p th:text=" 'Release date: ' + ${selectedReview.date}" />
+  <p th:text=" 'Director: ' + ${selectedReview.author}" />
+  <p th:text="${selectedReview.content}" />
+<!--<p th:text="${category.categoryName}" />-->
+
+</div>
+    
+</body>
+</html>

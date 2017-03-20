@@ -1,0 +1,24 @@
+<!DOCTYPE HTML>
+<html xmlns:th="http://www.thymeleaf.org">
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <link th:href="@{/css/category-view.css}" href="/css/category-view.css"  rel="stylesheet" type="text/css"/>
+    
+</head>
+
+<body>
+<div class="col-md-8 col-md-offset-2">
+	<h1><p th:text="${selectedCategory.categoryName}" /></h1>
+  </div>
+<div th:each="review : ${selectedCategory.reviews}">
+		<li>
+			<a th:href="@{'review?id=' + ${review.id}}">
+			<p th:text="${review.title}"></p>
+			</a>
+		</li>
+		
+	</div>
+    
+</body>
+</html>

@@ -1,0 +1,44 @@
+<!DOCTYPE HTML>
+<html xmlns:th="http://www.thymeleaf.org">
+
+<head>
+<div class="row">
+<div class="col-md-8 col-md-offset-2">
+
+    <title>My Movie Reviews</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <link th:href="@{/css/all-reviews.css}" href="/css/all-reviews.css"  rel="stylesheet" type="text/css"/>
+</div>
+</div>
+</head>
+
+<body>
+  <div class="col-md-8 col-md-offset-2">
+	<h1>My Movie Reviews</h1>
+  </div>
+	
+<ul>
+  <div class="col-md-8 col-md-offset-2">
+	<div th:each="review : ${reviews}">
+		<li>
+			<a th:href="@{'review?id=' + ${review.id}}">
+			<p th:text="${review.title}"></p>
+			</a>
+		</li>
+		
+	</div>
+  </div>
+
+
+<div id="content">
+	<a th:href="@{'http://localhost:8080/Categories'}">
+			<p th:text= " 'See Movie Categories' "></p>
+			
+			</a>
+
+</div>
+</ul>
+
+</body>
+
+</html>

@@ -1,0 +1,1 @@
+This is a website that displays reviews of recent movies. From the main page (http://localhost:8080/allReviews), the user can view the individual reviews or navigate to a listing of movie categories. From there, they can view a listing of all reviews in a given category, and from that view can click to see each review individually.
